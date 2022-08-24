@@ -7,6 +7,7 @@ import 'package:pdponlinebest2/pages/home_page5.dart';
 import 'package:pdponlinebest2/pages/home_page6.dart';
 import 'package:pdponlinebest2/pages/homework1.dart';
 import 'package:pdponlinebest2/pages/homework2.dart';
+import 'package:pdponlinebest2/pages/homework3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Homework1 (),
+      home: Homework3(),
     );
   }
 }

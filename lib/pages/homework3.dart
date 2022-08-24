@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Homework2 extends StatefulWidget {
-  const Homework2({Key? key}) : super(key: key);
+class Homework3 extends StatefulWidget {
+  const Homework3({Key? key}) : super(key: key);
 
   @override
-  State<Homework2> createState() => _Homework2State();
+  State<Homework3> createState() => _Homework3State();
 }
 
-class _Homework2State extends State<Homework2> {
+class _Homework3State extends State<Homework3> {
   final _formKey = GlobalKey<FormState>();
   String _email = "", _password = "";
 
@@ -21,6 +21,9 @@ class _Homework2State extends State<Homework2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('PDP Online'),
+      ),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,30 +34,37 @@ class _Homework2State extends State<Homework2> {
               style: TextStyle(color: Colors.black, fontSize: 32),
             ),
             Form(
+              key: _formKey,
               child: Column(
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
                     child: TextFormField(
-                      decoration: const InputDecoration(labelText: 'Email'),
-                      validator: (input) => input!.contains('@')
-                          ? 'Please enter a valid email'
-                          : null,
+                      decoration: const InputDecoration(labelText: 'Name'),
+                      validator: (input) =>
+                      input!.length < 2 ? 'Must be at least 2 characters' : null,
                       onSaved: (input) => _email = input!,
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
+                    child: TextFormField(
+                      decoration: const InputDecoration(labelText: 'Email'),
+                      validator: (input) =>
+                      input!.contains('@') ? null: 'Please enter a valid email',
+                      onSaved: (input) => _email = input!,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
                     child: TextFormField(
                       decoration: const InputDecoration(labelText: 'Password'),
-                      validator: (input) => input!.length < 6
-                          ? 'Must be at least 6 characters'
-                          : null,
+                      validator: (input) =>
+                      input!.length < 6 ? 'Must be at least 6 characters' : null,
                       onSaved: (input) => _password = input!,
                     ),
                   ),
+
                   SizedBox(
                     width: 380,
                     child: Padding(

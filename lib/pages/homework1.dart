@@ -36,13 +36,14 @@ class _Homework1State extends State<Homework1> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             gradient: LinearGradient(
-                                begin: Alignment.bottomRight,
-                                colors: [
-                                  Colors.black.withOpacity(0.9),
-                                  Colors.black.withOpacity(0.8),
-                                  Colors.black.withOpacity(0.4),
-                                  Colors.black.withOpacity(0.2),
-                                ]),
+                              begin: Alignment.bottomRight,
+                              colors: [
+                                Colors.black.withOpacity(0.9),
+                                Colors.black.withOpacity(0.8),
+                                Colors.black.withOpacity(0.4),
+                                Colors.black.withOpacity(0.2),
+                              ],
+                            ),
                           ),
                         ),
                         Container(
@@ -92,7 +93,7 @@ class _Homework1State extends State<Homework1> {
                             child: Text(
                               'PDP Online',
                               style:
-                              TextStyle(color: Colors.white, fontSize: 26),
+                                  TextStyle(color: Colors.white, fontSize: 26),
                             ),
                           ),
                         )
@@ -132,7 +133,7 @@ class _Homework1State extends State<Homework1> {
                             child: Text(
                               'PDP Online',
                               style:
-                              TextStyle(color: Colors.white, fontSize: 26),
+                                  TextStyle(color: Colors.white, fontSize: 26),
                             ),
                           ),
                         )
